@@ -16,6 +16,7 @@
 		4353F93D24C0DB50005CA82D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4353F93B24C0DB50005CA82D /* LaunchScreen.storyboard */; };
 		4353F94824C0DB50005CA82D /* FINAL_SUN_UPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353F94724C0DB50005CA82D /* FINAL_SUN_UPTests.swift */; };
 		4353F95324C0DB50005CA82D /* FINAL_SUN_UPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353F95224C0DB50005CA82D /* FINAL_SUN_UPUITests.swift */; };
+		436A569224C0F3D6000868DF /* QuizPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4353F94E24C0DB50005CA82D /* FINAL-SUN-UPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FINAL-SUN-UPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4353F95224C0DB50005CA82D /* FINAL_SUN_UPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FINAL_SUN_UPUITests.swift; sourceTree = "<group>"; };
 		4353F95424C0DB50005CA82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				4353F92F24C0DB4D005CA82D /* SceneDelegate.swift */,
 				4353F93124C0DB4D005CA82D /* ViewController.swift */,
 				4353F93324C0DB4D005CA82D /* Main.storyboard */,
+				436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */,
 				4353F93924C0DB50005CA82D /* Assets.xcassets */,
 				4353F93B24C0DB50005CA82D /* LaunchScreen.storyboard */,
 				4353F93E24C0DB50005CA82D /* Info.plist */,
@@ -266,6 +269,7 @@
 				4353F93224C0DB4D005CA82D /* ViewController.swift in Sources */,
 				4353F92E24C0DB4D005CA82D /* AppDelegate.swift in Sources */,
 				4353F93024C0DB4D005CA82D /* SceneDelegate.swift in Sources */,
+				436A569224C0F3D6000868DF /* QuizPage1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

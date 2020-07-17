@@ -17,6 +17,14 @@
 		4353F94824C0DB50005CA82D /* FINAL_SUN_UPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353F94724C0DB50005CA82D /* FINAL_SUN_UPTests.swift */; };
 		4353F95324C0DB50005CA82D /* FINAL_SUN_UPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4353F95224C0DB50005CA82D /* FINAL_SUN_UPUITests.swift */; };
 		436A569224C0F3D6000868DF /* QuizPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */; };
+		436A569424C1011F000868DF /* QuizPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569324C1011F000868DF /* QuizPage2ViewController.swift */; };
+		436A569624C10462000868DF /* SunscreenRecommendationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569524C10462000868DF /* SunscreenRecommendationPageViewController.swift */; };
+		436A569824C11C4A000868DF /* myBigClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569724C11C4A000868DF /* myBigClass.swift */; };
+		436A569A24C11FC7000868DF /* QuizPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569924C11FC7000868DF /* QuizPage3ViewController.swift */; };
+		436A569C24C11FF5000868DF /* QuizPage4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569B24C11FF5000868DF /* QuizPage4ViewController.swift */; };
+		436A569E24C1200D000868DF /* QuizPage5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569D24C1200D000868DF /* QuizPage5ViewController.swift */; };
+		436A56A024C12336000868DF /* QuizPage6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A569F24C12336000868DF /* QuizPage6ViewController.swift */; };
+		436A56A224C13BEE000868DF /* roundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A56A124C13BEE000868DF /* roundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		4353F95224C0DB50005CA82D /* FINAL_SUN_UPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FINAL_SUN_UPUITests.swift; sourceTree = "<group>"; };
 		4353F95424C0DB50005CA82D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage1ViewController.swift; sourceTree = "<group>"; };
+		436A569324C1011F000868DF /* QuizPage2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage2ViewController.swift; sourceTree = "<group>"; };
+		436A569524C10462000868DF /* SunscreenRecommendationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunscreenRecommendationPageViewController.swift; sourceTree = "<group>"; };
+		436A569724C11C4A000868DF /* myBigClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBigClass.swift; sourceTree = "<group>"; };
+		436A569924C11FC7000868DF /* QuizPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage3ViewController.swift; sourceTree = "<group>"; };
+		436A569B24C11FF5000868DF /* QuizPage4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage4ViewController.swift; sourceTree = "<group>"; };
+		436A569D24C1200D000868DF /* QuizPage5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage5ViewController.swift; sourceTree = "<group>"; };
+		436A569F24C12336000868DF /* QuizPage6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage6ViewController.swift; sourceTree = "<group>"; };
+		436A56A124C13BEE000868DF /* roundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,14 @@
 				4353F92F24C0DB4D005CA82D /* SceneDelegate.swift */,
 				4353F93124C0DB4D005CA82D /* ViewController.swift */,
 				4353F93324C0DB4D005CA82D /* Main.storyboard */,
+				436A56A124C13BEE000868DF /* roundButton.swift */,
+				436A569F24C12336000868DF /* QuizPage6ViewController.swift */,
+				436A569D24C1200D000868DF /* QuizPage5ViewController.swift */,
+				436A569B24C11FF5000868DF /* QuizPage4ViewController.swift */,
+				436A569924C11FC7000868DF /* QuizPage3ViewController.swift */,
+				436A569724C11C4A000868DF /* myBigClass.swift */,
+				436A569524C10462000868DF /* SunscreenRecommendationPageViewController.swift */,
+				436A569324C1011F000868DF /* QuizPage2ViewController.swift */,
 				436A569124C0F3D6000868DF /* QuizPage1ViewController.swift */,
 				4353F93924C0DB50005CA82D /* Assets.xcassets */,
 				4353F93B24C0DB50005CA82D /* LaunchScreen.storyboard */,
@@ -265,9 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436A56A224C13BEE000868DF /* roundButton.swift in Sources */,
+				436A569624C10462000868DF /* SunscreenRecommendationPageViewController.swift in Sources */,
+				436A569E24C1200D000868DF /* QuizPage5ViewController.swift in Sources */,
+				436A569C24C11FF5000868DF /* QuizPage4ViewController.swift in Sources */,
+				436A569824C11C4A000868DF /* myBigClass.swift in Sources */,
 				4353F93824C0DB4D005CA82D /* FINAL_SUN_UP.xcdatamodeld in Sources */,
 				4353F93224C0DB4D005CA82D /* ViewController.swift in Sources */,
 				4353F92E24C0DB4D005CA82D /* AppDelegate.swift in Sources */,
+				436A56A024C12336000868DF /* QuizPage6ViewController.swift in Sources */,
+				436A569A24C11FC7000868DF /* QuizPage3ViewController.swift in Sources */,
+				436A569424C1011F000868DF /* QuizPage2ViewController.swift in Sources */,
 				4353F93024C0DB4D005CA82D /* SceneDelegate.swift in Sources */,
 				436A569224C0F3D6000868DF /* QuizPage1ViewController.swift in Sources */,
 			);

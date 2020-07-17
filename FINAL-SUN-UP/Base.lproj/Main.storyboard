@@ -10,7 +10,7 @@
         <!--quiz page 1-->
         <scene sceneID="AKJ-LI-QfB">
             <objects>
-                <viewController title="quiz page 1" id="2iy-BL-Dvj" sceneMemberID="viewController">
+                <viewController title="quiz page 1" id="2iy-BL-Dvj" customClass="QuizPage1ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHW-zO-b3D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,15 +63,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R58-Gi-jJi">
-                                <rect key="frame" x="16" y="178" width="343" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
-                                <state key="normal" title="Dry">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZg-s5-N6N">
                                 <rect key="frame" x="16" y="273" width="343" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -80,6 +71,9 @@
                                 <state key="normal" title="Normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalButton:" destination="2iy-BL-Dvj" eventType="touchUpInside" id="WLb-44-9eP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-Pr-XaJ">
                                 <rect key="frame" x="16" y="368" width="343" height="70"/>
@@ -89,6 +83,9 @@
                                 <state key="normal" title="Oily">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="oilyButton:" destination="2iy-BL-Dvj" eventType="touchUpInside" id="8S7-wa-JnJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtR-JD-vO3">
                                 <rect key="frame" x="16" y="463" width="343" height="71"/>
@@ -98,6 +95,9 @@
                                 <state key="normal" title="Combination">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="combinationButton:" destination="2iy-BL-Dvj" eventType="touchUpInside" id="Xcp-Q0-TcC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jey-fA-dqB">
                                 <rect key="frame" x="320" y="541" width="50" height="50"/>
@@ -107,20 +107,38 @@
                                     <segue destination="clO-RC-dQV" kind="show" id="nR5-38-Zz5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1o-fv-Qis">
+                                <rect key="frame" x="16" y="178" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.91764705879999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Dry">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="superDryButton:" destination="2iy-BL-Dvj" eventType="touchUpInside" id="9Ci-8v-ARN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="u1s-B6-cSd"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z4G-uu-kLk"/>
+                    <connections>
+                        <outlet property="comboButtonOutlet" destination="UtR-JD-vO3" id="ZA4-Fm-q1Q"/>
+                        <outlet property="normalButtonOutlet" destination="oZg-s5-N6N" id="ou9-Ut-a1s"/>
+                        <outlet property="oilyButtonOutlet" destination="6ZL-Pr-XaJ" id="31B-DI-Uy5"/>
+                        <outlet property="superDryButtonOutlet" destination="P1o-fv-Qis" id="ODz-kw-50t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgs-gQ-HxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-817" y="-608"/>
+            <point key="canvasLocation" x="-818.39999999999998" y="-608.54572713643188"/>
         </scene>
         <!--quiz page 2-->
         <scene sceneID="z7o-yn-xtn">
             <objects>
-                <viewController title="quiz page 2" id="clO-RC-dQV" sceneMemberID="viewController">
+                <viewController title="quiz page 2" id="clO-RC-dQV" customClass="QuizPage2ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f0R-JZ-fxt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,6 +170,9 @@
                                 <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="3"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="FhB-R0-4rE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAW-hg-93o">
                                 <rect key="frame" x="225" y="592" width="75" height="75"/>
@@ -175,6 +196,9 @@
                                 <state key="normal" title="Invisible">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="invisibleButtonn:" destination="clO-RC-dQV" eventType="touchUpInside" id="nNy-4j-A48"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-DN-5TN">
                                 <rect key="frame" x="16" y="273" width="343" height="70"/>
@@ -184,6 +208,9 @@
                                 <state key="normal" title="Mattifying">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="mattifyingButton:" destination="clO-RC-dQV" eventType="touchUpInside" id="6oc-RB-CK0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUy-w7-rdY">
                                 <rect key="frame" x="16" y="368" width="343" height="70"/>
@@ -193,6 +220,9 @@
                                 <state key="normal" title="Hydrating">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="hydratingButton:" destination="clO-RC-dQV" eventType="touchUpInside" id="zCU-Ew-vlp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPa-rR-Tz3">
                                 <rect key="frame" x="16" y="463" width="343" height="71"/>
@@ -202,6 +232,9 @@
                                 <state key="normal" title="Water-resistant">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="waterButton:" destination="clO-RC-dQV" eventType="touchUpInside" id="Jdn-76-mRo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y08-OJ-jfm">
                                 <rect key="frame" x="320" y="541" width="50" height="50"/>
@@ -209,6 +242,14 @@
                                 <state key="normal" backgroundImage="Untitled design"/>
                                 <connections>
                                     <segue destination="Mqs-e7-DBI" kind="show" id="Pth-mB-Fe2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlD-RG-Bvj">
+                                <rect key="frame" x="12" y="541" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <segue destination="2iy-BL-Dvj" kind="show" id="H3R-bh-ENh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -224,7 +265,7 @@
         <!--quiz page 3-->
         <scene sceneID="qrR-xx-D2j">
             <objects>
-                <viewController title="quiz page 3" id="Mqs-e7-DBI" sceneMemberID="viewController">
+                <viewController title="quiz page 3" id="Mqs-e7-DBI" customClass="QuizPage3ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e2e-Cw-lPE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,6 +290,9 @@
                                 <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="3"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ohI-QL-WWY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-2e-gJ8">
                                 <rect key="frame" x="225" y="592" width="75" height="75"/>
@@ -272,6 +316,9 @@
                                 <state key="normal" title="Spray">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sprayButton:" destination="Mqs-e7-DBI" eventType="touchUpInside" id="SRT-hX-snI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp0-vs-DEs">
                                 <rect key="frame" x="16" y="273" width="343" height="70"/>
@@ -281,6 +328,9 @@
                                 <state key="normal" title="Stick">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stickButton:" destination="Mqs-e7-DBI" eventType="touchUpInside" id="cas-JI-Diu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeY-8v-mPc">
                                 <rect key="frame" x="16" y="368" width="343" height="70"/>
@@ -290,6 +340,9 @@
                                 <state key="normal" title="Lotion">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="lotionButton:" destination="Mqs-e7-DBI" eventType="touchUpInside" id="Cy8-sa-VJZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLG-r9-gPj">
                                 <rect key="frame" x="320" y="451" width="50" height="50"/>
@@ -306,6 +359,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awr-cb-edR">
+                                <rect key="frame" x="16" y="451" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <segue destination="clO-RC-dQV" kind="show" id="ffl-fc-dmN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="End-EN-ywL"/>
@@ -316,10 +377,10 @@
             </objects>
             <point key="canvasLocation" x="1030" y="-609"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz Page4 View Controller-->
         <scene sceneID="h1u-un-oyJ">
             <objects>
-                <viewController id="hwr-OJ-TW1" sceneMemberID="viewController">
+                <viewController id="hwr-OJ-TW1" customClass="QuizPage4ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fbt-ub-fQs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,6 +412,9 @@
                                 <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="3"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="NJn-r2-BJw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSS-I5-2c7">
                                 <rect key="frame" x="225" y="592" width="75" height="75"/>
@@ -374,6 +438,9 @@
                                 <state key="normal" title="Very sensitive">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="verySensitiveButton:" destination="hwr-OJ-TW1" eventType="touchUpInside" id="uQp-Ij-O0d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCl-6a-QLP">
                                 <rect key="frame" x="16" y="273" width="343" height="70"/>
@@ -383,6 +450,9 @@
                                 <state key="normal" title="Sensitive">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sensitiveButton:" destination="hwr-OJ-TW1" eventType="touchUpInside" id="wGI-OT-3TF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXQ-g2-n9c">
                                 <rect key="frame" x="16" y="368" width="343" height="70"/>
@@ -392,6 +462,9 @@
                                 <state key="normal" title="Normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="normalSensitiveButton:" destination="hwr-OJ-TW1" eventType="touchUpInside" id="w5b-gi-PNz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYv-0y-tLd">
                                 <rect key="frame" x="16" y="463" width="343" height="71"/>
@@ -401,11 +474,25 @@
                                 <state key="normal" title="Resistant">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resistantButton:" destination="hwr-OJ-TW1" eventType="touchUpInside" id="Whr-Zg-a7f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXV-G1-eNu">
                                 <rect key="frame" x="320" y="541" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Untitled design"/>
+                                <connections>
+                                    <segue destination="8iI-Om-id6" kind="show" id="Djb-b7-jfq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq1-nq-Dti">
+                                <rect key="frame" x="12" y="541" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <segue destination="Mqs-e7-DBI" kind="show" id="MBM-hO-w7D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -417,6 +504,264 @@
             </objects>
             <point key="canvasLocation" x="1838" y="-609"/>
         </scene>
+        <!--Quiz Page5 View Controller-->
+        <scene sceneID="Sw0-WU-WP9">
+            <objects>
+                <viewController id="8iI-Om-id6" customClass="QuizPage5ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LFP-qk-mf5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How does your skin react to sunlight exposure?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-Jv-H0B">
+                                <rect key="frame" x="0.0" y="27" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-hV-YIm">
+                                <rect key="frame" x="0.0" y="592" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnl-dz-zFF">
+                                <rect key="frame" x="74" y="592" width="77" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbk-De-Qlr">
+                                <rect key="frame" x="150" y="592" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="3"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kmS-8I-v5i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RT-EE-Z6i">
+                                <rect key="frame" x="225" y="592" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xt4-jQ-Uet">
+                                <rect key="frame" x="300" y="592" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvp-fs-Ve4">
+                                <rect key="frame" x="16" y="178" width="343" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Burns, blisters, and peels">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsBlistersPeels:" destination="8iI-Om-id6" eventType="touchUpInside" id="lWS-2F-Qll"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJt-fg-TqT">
+                                <rect key="frame" x="16" y="273" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Burns moderately">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsModerately:" destination="8iI-Om-id6" eventType="touchUpInside" id="32Y-Lx-VAW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otf-1D-hkN">
+                                <rect key="frame" x="16" y="368" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Burns rarely">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsRarely:" destination="8iI-Om-id6" eventType="touchUpInside" id="8wW-5N-UkC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKs-g1-MMs">
+                                <rect key="frame" x="16" y="463" width="343" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Never burns">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="neverBurns:" destination="8iI-Om-id6" eventType="touchUpInside" id="WXb-Ra-JP0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub6-T7-f4t">
+                                <rect key="frame" x="320" y="541" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Untitled design"/>
+                                <connections>
+                                    <segue destination="Oh5-FB-0hC" kind="show" id="Jr8-I0-ysA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dp-uB-4gG">
+                                <rect key="frame" x="16" y="541" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <segue destination="hwr-OJ-TW1" kind="show" id="aSs-g4-R1u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="feJ-JF-OaQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xJ2-Cx-8J7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQo-nX-TiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771" y="-611"/>
+        </scene>
+        <!--Quiz Page6 View Controller-->
+        <scene sceneID="QvM-rr-SNA">
+            <objects>
+                <viewController id="Oh5-FB-0hC" customClass="QuizPage6ViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nd-ht-r8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your  price range?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXT-6A-hS8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-mS-a8S">
+                                <rect key="frame" x="0.0" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWR-PU-eEv">
+                                <rect key="frame" x="74" y="572" width="77" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb2-64-ffu">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEY-8U-pgo">
+                                <rect key="frame" x="225" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8n-y2-LzI">
+                                <rect key="frame" x="300" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="2"/>
+                                <connections>
+                                    <segue destination="VfF-af-IK3" kind="show" id="bBO-9q-SNf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-zE-azT">
+                                <rect key="frame" x="16" y="158" width="343" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="$10 and under">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsBlistersPeels:" destination="8iI-Om-id6" eventType="touchUpInside" id="Bce-tF-rdl"/>
+                                    <action selector="tenAndUnder:" destination="Oh5-FB-0hC" eventType="touchUpInside" id="9rR-bN-TDO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-HG-lt5">
+                                <rect key="frame" x="16" y="253" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="$10 to $15">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsModerately:" destination="8iI-Om-id6" eventType="touchUpInside" id="VJn-vE-bho"/>
+                                    <action selector="tenToFifteen:" destination="Oh5-FB-0hC" eventType="touchUpInside" id="3E5-wR-JSp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="978-C2-ejR">
+                                <rect key="frame" x="16" y="348" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="$15 to $20">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="burnsRarely:" destination="8iI-Om-id6" eventType="touchUpInside" id="LGp-km-YZf"/>
+                                    <action selector="fifteenToTwenty:" destination="Oh5-FB-0hC" eventType="touchUpInside" id="Mxx-Bb-fmf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siI-mX-Za0">
+                                <rect key="frame" x="16" y="443" width="343" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82636465859999997" green="0.91682212029999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="$20 to $35">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="neverBurns:" destination="8iI-Om-id6" eventType="touchUpInside" id="1nr-zN-GxZ"/>
+                                    <action selector="twentyToThirtyFive:" destination="Oh5-FB-0hC" eventType="touchUpInside" id="8lH-uq-2hp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCK-1j-5br">
+                                <rect key="frame" x="320" y="521" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Untitled design"/>
+                                <connections>
+                                    <segue destination="c4x-Kl-gmK" kind="show" id="I1d-Lm-6VX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVa-F0-IQq">
+                                <rect key="frame" x="16" y="521" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backArrow"/>
+                                <connections>
+                                    <segue destination="8iI-Om-id6" kind="show" id="jbK-Hp-ji3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="J9k-Uu-vcs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sZ2-hJ-p6j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yc-T5-byb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695" y="-656"/>
+        </scene>
         <!--home page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -425,18 +770,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmF-mB-90U">
-                                <rect key="frame" x="27" y="377" width="320" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="37"/>
-                                <state key="normal" title="Let's get started!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2iy-BL-Dvj" kind="show" id="fu7-U8-iAh"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SUN (3)" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-Vo-q9w">
                                 <rect key="frame" x="32" y="-55" width="265" height="462"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -456,6 +789,23 @@
                                     <segue destination="VfF-af-IK3" kind="show" id="D8Q-P0-bJ3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVO-u2-9CD" customClass="roundButton" customModule="FINAL_SUN_UP" customModuleProvider="target">
+                                <rect key="frame" x="13" y="361" width="348" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.64313725489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="37"/>
+                                <state key="normal" title="Let's get started!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="37"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2iy-BL-Dvj" kind="show" id="fm9-KE-kzl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82745098039215681" green="0.90588235294117647" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -464,7 +814,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="157"/>
+            <point key="canvasLocation" x="-778.39999999999998" y="156.97151424287858"/>
         </scene>
         <!--info page-->
         <scene sceneID="ftY-xm-i3e">
@@ -553,7 +903,7 @@
         <!--sunscreen recommendation-->
         <scene sceneID="Fru-ex-faV">
             <objects>
-                <viewController title="sunscreen recommendation" id="c4x-Kl-gmK" sceneMemberID="viewController">
+                <viewController title="sunscreen recommendation" id="c4x-Kl-gmK" customClass="SunscreenRecommendationPageViewController" customModule="FINAL_SUN_UP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zh1-QA-lMO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,6 +928,9 @@
                                 <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="3"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Im7-im-nso"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aof-cz-UPM">
                                 <rect key="frame" x="225" y="592" width="75" height="75"/>
@@ -592,6 +945,9 @@
                                 <color key="backgroundColor" red="0.8862745098" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="2"/>
+                                <connections>
+                                    <segue destination="VfF-af-IK3" kind="show" id="aKp-fM-cfB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sunscreen Recommendations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-kv-Rx6">
                                 <rect key="frame" x="30" y="36" width="315" height="32"/>
@@ -600,17 +956,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HbW-Xe-ehC">
+                                <rect key="frame" x="52" y="76" width="274" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4m-GD-JEj">
+                                <rect key="frame" x="52" y="459" width="274" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gSj-hL-AtQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="veF-vY-5pc"/>
+                    <connections>
+                        <outlet property="sunscreenImage" destination="HbW-Xe-ehC" id="Pee-4r-xvO"/>
+                        <outlet property="sunscreenName" destination="D4m-GD-JEj" id="nXc-Pg-onv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVa-4F-1Fn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1594" y="-394"/>
+            <point key="canvasLocation" x="4296.8000000000002" y="-1526.0869565217392"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aC0-yz-tel"/>
+        <segue reference="D8Q-P0-bJ3"/>
+        <segue reference="s3p-ld-Gdz"/>
+        <segue reference="Djb-b7-jfq"/>
+        <segue reference="ega-5P-NU6"/>
+        <segue reference="Pth-mB-Fe2"/>
+        <segue reference="nR5-38-Zz5"/>
+        <segue reference="fm9-KE-kzl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="&amp;" width="957" height="152"/>
         <image name="1" width="2000" height="2000"/>
@@ -620,6 +1001,7 @@
         <image name="5" width="2000" height="2000"/>
         <image name="SUN (3)" width="1728" height="2304"/>
         <image name="Untitled design" width="300" height="300"/>
+        <image name="backArrow" width="300" height="300"/>
         <image name="coralbleaching" width="796" height="397"/>
         <image name="cute sun bulletpoints" width="300" height="300"/>
     </resources>

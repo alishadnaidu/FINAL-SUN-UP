@@ -510,6 +510,12 @@
                         <viewLayoutGuide key="safeArea" id="9WS-ws-H5g"/>
                     </view>
                     <navigationItem key="navigationItem" id="w6B-U5-1Sk"/>
+                    <connections>
+                        <outlet property="normalSensitivityButton" destination="LXQ-g2-n9c" id="xNe-CF-cPV"/>
+                        <outlet property="resistantButton" destination="OYv-0y-tLd" id="XyG-Oc-hLg"/>
+                        <outlet property="sensitiveButton" destination="qCl-6a-QLP" id="4af-Ez-I3O"/>
+                        <outlet property="verySensitiveButton" destination="Dsl-SR-f3o" id="sLj-yr-AcE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tl9-DG-XtO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -637,6 +643,12 @@
                         <viewLayoutGuide key="safeArea" id="feJ-JF-OaQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="xJ2-Cx-8J7"/>
+                    <connections>
+                        <outlet property="burnsBlistersButtonOutlet" destination="Lvp-fs-Ve4" id="Pk0-LG-UMp"/>
+                        <outlet property="burnsModeratelyButtonOutlet" destination="WJt-fg-TqT" id="cT6-f2-lTG"/>
+                        <outlet property="burnsRarelyButtonOutlet" destination="Otf-1D-hkN" id="sEQ-Ae-WjU"/>
+                        <outlet property="neverBurnsButtonOutlet" destination="LKs-g1-MMs" id="fSS-8O-wxJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQo-nX-TiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1003,9 +1015,9 @@
         <segue reference="I1d-Lm-6VX"/>
         <segue reference="bBO-9q-SNf"/>
         <segue reference="kmS-8I-v5i"/>
-        <segue reference="jbK-Hp-ji3"/>
+        <segue reference="Djb-b7-jfq"/>
         <segue reference="aSs-g4-R1u"/>
-        <segue reference="Pth-mB-Fe2"/>
+        <segue reference="MBM-hO-w7D"/>
         <segue reference="ffl-fc-dmN"/>
         <segue reference="H3R-bh-ENh"/>
     </inferredMetricsTieBreakers>

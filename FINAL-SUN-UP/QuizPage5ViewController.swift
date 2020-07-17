@@ -10,6 +10,11 @@ import UIKit
 
 class QuizPage5ViewController: UIViewController {
 
+    @IBOutlet weak var burnsBlistersButtonOutlet: UIButton!
+    @IBOutlet weak var burnsModeratelyButtonOutlet: UIButton!
+    @IBOutlet weak var burnsRarelyButtonOutlet: UIButton!
+    @IBOutlet weak var neverBurnsButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,15 +23,32 @@ class QuizPage5ViewController: UIViewController {
     
     @IBAction func burnsBlistersPeels(_ sender: UIButton) {
         myBigClass.skinReactionToSunlight = "Burns, blisters, and peels"
+        self.burnsBlistersButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.burnsModeratelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsRarelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.neverBurnsButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     @IBAction func burnsModerately(_ sender: UIButton) {
         myBigClass.skinReactionToSunlight = "Burns moderately"
+        self.burnsBlistersButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsModeratelyButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.burnsRarelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.neverBurnsButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        
     }
     @IBAction func burnsRarely(_ sender: UIButton) {
         myBigClass.skinReactionToSunlight = "Burns rarely"
+        self.burnsBlistersButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsModeratelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsRarelyButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.neverBurnsButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     @IBAction func neverBurns(_ sender: UIButton) {
         myBigClass.skinReactionToSunlight = "Never burns"
+        self.burnsBlistersButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsModeratelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.burnsRarelyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.neverBurnsButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
     }
     
     /*

@@ -10,6 +10,11 @@ import UIKit
 
 class QuizPage4ViewController: UIViewController {
 
+    @IBOutlet weak var verySensitiveButtonOutlet: UIButton!
+    @IBOutlet weak var sensitiveButtonOutlet: UIButton!
+    @IBOutlet weak var normalSensitivityButtonOutlet: UIButton!
+    @IBOutlet weak var resistantButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,17 +22,33 @@ class QuizPage4ViewController: UIViewController {
     }
     @IBAction func verySensitiveButton(_ sender: UIButton) {
         myBigClass.sensitivity = "Very sensitive"
+        self.verySensitiveButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.sensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.normalSensitivityButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.resistantButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     @IBAction func sensitiveButton(_ sender: UIButton) {
         myBigClass.sensitivity = "Sensitive"
+        self.verySensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.sensitiveButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.normalSensitivityButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.resistantButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     
     @IBAction func normalSensitiveButton(_ sender: UIButton) {
         myBigClass.sensitivity = "Normal"
+        self.verySensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.sensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.normalSensitivityButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.resistantButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     
     @IBAction func resistantButton(_ sender: UIButton) {
         myBigClass.sensitivity = "Resistant"
+        self.verySensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.sensitiveButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.normalSensitivityButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.resistantButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
     }
     /*
     // MARK: - Navigation

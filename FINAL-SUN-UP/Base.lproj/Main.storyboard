@@ -768,6 +768,12 @@
                         <viewLayoutGuide key="safeArea" id="J9k-Uu-vcs"/>
                     </view>
                     <navigationItem key="navigationItem" id="sZ2-hJ-p6j"/>
+                    <connections>
+                        <outlet property="TwentyAndAboveButtonOutlet" destination="siI-mX-Za0" id="CFi-5d-02W"/>
+                        <outlet property="fifteenTo20ButtonOutlet" destination="978-C2-ejR" id="McJ-3n-gor"/>
+                        <outlet property="tenTo15ButtonOutlet" destination="8MA-HG-lt5" id="p0U-0D-rLp"/>
+                        <outlet property="under10ButtonOutlet" destination="ydP-zE-azT" id="JHR-9W-US5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yc-T5-byb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -994,11 +1000,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aC0-yz-tel"/>
-        <segue reference="D8Q-P0-bJ3"/>
-        <segue reference="ohI-QL-WWY"/>
-        <segue reference="Djb-b7-jfq"/>
-        <segue reference="ega-5P-NU6"/>
+        <segue reference="I1d-Lm-6VX"/>
+        <segue reference="bBO-9q-SNf"/>
+        <segue reference="kmS-8I-v5i"/>
+        <segue reference="jbK-Hp-ji3"/>
+        <segue reference="aSs-g4-R1u"/>
         <segue reference="Pth-mB-Fe2"/>
         <segue reference="ffl-fc-dmN"/>
         <segue reference="H3R-bh-ENh"/>

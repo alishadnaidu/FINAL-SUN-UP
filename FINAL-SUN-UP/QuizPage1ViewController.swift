@@ -38,6 +38,7 @@ class QuizPage1ViewController: UIViewController {
         self.oilyButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
         self.comboButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
+    
     @IBAction func normalButton(_ sender: UIButton) {
         myBigClass.skinType = "Normal"
         self.superDryButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)

@@ -257,6 +257,12 @@
                         <viewLayoutGuide key="safeArea" id="4vg-qC-oLl"/>
                     </view>
                     <navigationItem key="navigationItem" id="yf6-FH-Ety"/>
+                    <connections>
+                        <outlet property="hydratingButtonOutlet" destination="BUy-w7-rdY" id="svv-yg-G4h"/>
+                        <outlet property="invisibleButtonOutlet" destination="N73-Rb-9uv" id="lab-Ww-Heo"/>
+                        <outlet property="mattifyingButtonOutlet" destination="Qek-DN-5TN" id="gFD-Ou-OfF"/>
+                        <outlet property="waterResistantButtonOutlet" destination="NPa-rR-Tz3" id="jIH-jl-G6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lel-d2-3uS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,6 +378,11 @@
                         <viewLayoutGuide key="safeArea" id="End-EN-ywL"/>
                     </view>
                     <navigationItem key="navigationItem" id="HMH-LH-zCu"/>
+                    <connections>
+                        <outlet property="lotionButtonOutlet" destination="BeY-8v-mPc" id="UTs-jw-Xzn"/>
+                        <outlet property="sprayButtonOutlet" destination="NOu-8M-3dT" id="UC5-uh-gvA"/>
+                        <outlet property="stickButtonOutlet" destination="Mp0-vs-DEs" id="qck-nb-wYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yz-Bf-lpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -985,12 +996,12 @@
     <inferredMetricsTieBreakers>
         <segue reference="aC0-yz-tel"/>
         <segue reference="D8Q-P0-bJ3"/>
-        <segue reference="s3p-ld-Gdz"/>
+        <segue reference="ohI-QL-WWY"/>
         <segue reference="Djb-b7-jfq"/>
         <segue reference="ega-5P-NU6"/>
         <segue reference="Pth-mB-Fe2"/>
-        <segue reference="nR5-38-Zz5"/>
-        <segue reference="fm9-KE-kzl"/>
+        <segue reference="ffl-fc-dmN"/>
+        <segue reference="H3R-bh-ENh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="&amp;" width="957" height="152"/>

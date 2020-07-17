@@ -10,6 +10,11 @@ import UIKit
 
 class QuizPage3ViewController: UIViewController {
 
+    
+    @IBOutlet weak var sprayButtonOutlet: UIButton!
+    @IBOutlet weak var stickButtonOutlet: UIButton!
+    @IBOutlet weak var lotionButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,13 +23,22 @@ class QuizPage3ViewController: UIViewController {
     
     @IBAction func sprayButton(_ sender: UIButton) {
         myBigClass.sunscreenType = "Spray"
+        self.sprayButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.stickButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.lotionButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     
     @IBAction func stickButton(_ sender: UIButton) {
         myBigClass.sunscreenType = "Stick"
+        self.sprayButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.stickButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
+        self.lotionButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
     }
     @IBAction func lotionButton(_ sender: UIButton) {
         myBigClass.sunscreenType = "Lotion"
+        self.sprayButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.stickButtonOutlet.backgroundColor = UIColor(red: 0.827, green: 0.9176, blue: 1.0, alpha: 1.0)
+        self.lotionButtonOutlet.backgroundColor = UIColor(red: 1.0, green: 0.89, blue: 0.556, alpha: 1.0)
     }
     
     /*
